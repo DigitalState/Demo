@@ -1,0 +1,3 @@
+---
+records_config_file: /srv/records/app/config/parameters.yml
+records_jwt_key_pass_phrase: ~

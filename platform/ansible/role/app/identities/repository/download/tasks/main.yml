@@ -1,0 +1,7 @@
+---
+- name: Download identities repository
+  git:
+      repo: '{{ identities_repository }}'
+      version: '{{ identities_version }}'
+      dest: /srv/identities
+      force: yes

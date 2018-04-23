@@ -1,0 +1,3 @@
+---
+proxy_repository: https://github.com/DigitalState/Proxy.git
+proxy_version: master

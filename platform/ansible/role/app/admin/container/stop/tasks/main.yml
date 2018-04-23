@@ -1,0 +1,9 @@
+---
+- name: Stop admin container
+  docker_service:
+      project_src: /srv/admin
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
+      state: present
+      stopped: yes

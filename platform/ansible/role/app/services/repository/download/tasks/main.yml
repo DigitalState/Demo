@@ -1,0 +1,7 @@
+---
+- name: Download services repository
+  git:
+      repo: '{{ services_repository }}'
+      version: '{{ services_version }}'
+      dest: /srv/services
+      force: yes

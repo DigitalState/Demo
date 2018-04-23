@@ -1,0 +1,4 @@
+---
+tasks_repository: https://github.com/DigitalState/Tasks.git
+tasks_version: master
+tasks_credential: ~

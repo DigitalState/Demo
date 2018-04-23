@@ -1,0 +1,7 @@
+---
+- name: Download ui repository
+  git:
+      repo: '{{ ui_repository }}'
+      version: '{{ ui_version }}'
+      dest: /srv/ui
+      force: yes

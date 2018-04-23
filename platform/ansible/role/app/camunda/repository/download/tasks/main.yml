@@ -1,0 +1,7 @@
+---
+- name: Download camunda repository
+  git:
+      repo: '{{ camunda_repository }}'
+      version: '{{ camunda_version }}'
+      dest: /srv/camunda
+      force: yes
