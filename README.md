@@ -25,9 +25,9 @@ For the purpose of the demo, we will assume the following context:
 
 ### Ansible Inventory
 
-The DigitalState Platform contains an Ansible inventory file per environment.
+The DigitalState Platform contains an Ansible inventory file per environment. Prior to deploying the Platform on the dev server, the dev inventory file needs to be configured.
 
-Prior to deploying the Platform on the dev server, the dev inventory file needs to be configured. The following configurations have been modified:
+The following configurations have been modified:
 
 - [ansible_host](https://github.com/DigitalState/Demo/blob/master/platform/ansible/env/dev/inventory.yml#L7): The ansible_host config has been set to our dev server ip.
 - [encryption.secret](https://github.com/DigitalState/Demo/blob/master/platform/ansible/env/dev/inventory.yml#L16): The encryption.secret config has been set to the envyrption secret.
