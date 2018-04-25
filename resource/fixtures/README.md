@@ -22,6 +22,8 @@ The available microservices names are:
 
 For demo purposes, we have created fixtures overrides for each microservices, which are exact duplicates of the base decentralized fixtures found in each microservices.
 
+> Note: when overriding fixtures for a microservice, it is required to include all fixture files. It is not possible to just override specific files.
+
 ## Structure
 
 Fixtures are implemented as [YML configuration](https://en.wikipedia.org/wiki/YAML) files. Each files represents a list of items (such as entities, forms, workflows), that will be loaded into the microservice.
