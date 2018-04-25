@@ -8,7 +8,7 @@ Its purpose is to highlight the configurations modifications required prior to d
 
 ## Table of Contents
 
-- [Intentions](#context)
+- [Context](#context)
 - [Customizations](#customizations)
 - [Contributing](#contributing)
 - [Credits](#credits)
