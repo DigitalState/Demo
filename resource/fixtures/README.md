@@ -24,7 +24,7 @@ For demo purposes, we have created fixtures overrides for each microservices, wh
 
 ## Structure
 
-Fixtures are implemented as YML configuration files. Each files represents a list of items (such as entities, forms, workflows), that will be loaded into the microservice.
+Fixtures are implemented as [YML configuration](https://en.wikipedia.org/wiki/YAML) files. Each files represents a list of items (such as entities, forms, workflows), that will be loaded into the microservice.
 
 Each YML configuration files contains two attributes `items` and `prototype`.
 
