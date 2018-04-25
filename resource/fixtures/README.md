@@ -20,11 +20,11 @@ The available microservices names are:
 - records
 - services
 
-For demo purposes, we have created fixtures overrides for each microservices.
+For demo purposes, we have created fixtures overrides for each microservices, which are exact duplicates of the base decentralized fixtures found in each microservices.
 
 ## Structure
 
-Fixtures are implemented as YML configuration files. Each files represents a list of items that will be loaded into the microservice.
+Fixtures are implemented as YML configuration files. Each files represents a list of items (such as entities, forms, workflows), that will be loaded into the microservice.
 
 Each YML configuration files contains two attributes `items` and `prototype`.
 
