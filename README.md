@@ -30,8 +30,8 @@ The DigitalState Platform contains an Ansible inventory file per environment. Pr
 The following configurations have been modified:
 
 - [ansible_host](https://github.com/DigitalState/Demo/blob/master/platform/ansible/env/dev/inventory.yml#L7): The ansible_host config has been set to our dev server ip.
-- [encryption.secret](https://github.com/DigitalState/Demo/blob/master/platform/ansible/env/dev/inventory.yml#L16): The encryption.secret config has been set to the envyrption secret.
-- [jwt.pass_phrase](https://github.com/DigitalState/Demo/blob/master/platform/ansible/env/dev/inventory.yml#L18): The jwt.pass_phrase config has been set to the secret pass phrase associated with the jwt private key.
+- [encryption.secret](https://github.com/DigitalState/Demo/blob/master/platform/ansible/env/dev/inventory.yml#L16): The encryption.secret config has been set to secret, unique 32 characters long string. This value is used by various components for seeding, for example: Symfony CSRF token generation.
+- [jwt.pass_phrase](https://github.com/DigitalState/Demo/blob/master/platform/ansible/env/dev/inventory.yml#L18): The jwt.pass_phrase config has been set to the secret pass phrase associated with the jwt private key used by the authentication component.
 
 ### Fixtures
 
