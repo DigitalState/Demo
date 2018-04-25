@@ -41,7 +41,7 @@ The following configurations have been modified:
 
 ### Fixtures
 
-> The purpose of fixtures is to document the known state of the Platform, and most importantly, being able to revert back to that snapshot on demand. The snapshot includes all Postgres database rows, Redis cache, Formio forms, Camunda BPMN workflows, etc.
+> The purpose of fixtures is to document the known state of the Platform, and most importantly, being able to revert back to that known state on demand. The known state includes all Postgres database rows, Redis cache, Formio forms, Camunda BPMN workflows, etc.
 
 Fixtures are often used for the purpose of setting up sample demo data during the first deployment of the Platform.
 
