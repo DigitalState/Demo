@@ -22,7 +22,7 @@ The available microservices names are:
 
 For demo purposes, we have created fixtures overrides for each microservice, which are exact duplicates of the base decentralized fixtures found in each microservice.
 
-> Note: when overriding fixtures for a microservice, it is required to include all fixture files. It is not possible to just override specific files.
+> Note: when overriding fixtures for a microservice, it is required to include all fixtures files. It is not possible to just override specific files.
 
 ## Structure
 
