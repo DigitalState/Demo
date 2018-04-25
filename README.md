@@ -4,12 +4,14 @@
 
 The Demo repository is an example of a configured [Platform](https://github.com/DigitalState/Platform) repository.
 
-Its purpose is to highlight the configurations modifications required prior to deployment, demonstrate some available features and just overall provide a deeper understanding of the Platform through a real world use case.
+The purpose of this repository is to highlight the configurations modifications required prior to deployment, demonstrate some features available to the developers and devops and just overall provide a deeper understanding of the Platform through a real world use case.
 
 ## Table of Contents
 
 - [Context](#context)
 - [Customizations](#customizations)
+- [Features](#features)
+- [Conclusion](#conclusion)
 - [Contributing](#contributing)
 - [Credits](#credits)
 
@@ -23,9 +25,11 @@ For the purpose of the demo, we will assume the following context:
 
 ## Customizations
 
+This repository is essentially a clone of [Platform](https://github.com/DigitalState/Platform) with the following amends:
+
 ### Ansible Inventory
 
-The DigitalState Platform contains an Ansible inventory file per environment. Each inventory files describes a wide range of configurations, from which servers its deploying to, to platform secrets, to which microservices will be enabled, etc.
+The DigitalState Platform contains an Ansible inventory file per environment. Each inventory files describes a wide range of configurations, from which servers Ansible is deploying to, to which microservices will be enabled, etc.
 
 Prior to deploying the Platform on the dev server, the dev inventory file needs to be configured.
 
@@ -37,11 +41,19 @@ The following configurations have been modified:
 
 ### Fixtures
 
-The purpose of fixtures is to document the known state of the Platform, and most importantly, being able to revert back to that known state on demand. The known state includes all Postgres database rows, Redis cache, Formio forms, Camunda bpmn workflows, etc.
+The purpose of fixtures is to document the known state of the Platform, and most importantly, being able to revert back to that known state on demand. The known state includes all Postgres database rows, Redis cache, Formio forms, Camunda BPMN workflows, etc.
 
-Fixtures are often used for the purpose of setting up sample data during initialization of the Platform.
+Fixtures are often used for the purpose of setting up sample demo data during the first deployment of the Platform.
 
-Custom fixtures have been added to the [fixtures directory](resource/fixtures). This enables the demo to have its own sample data and bypass the base fixtures provided by DigitalState.
+Custom fixtures have been added to the [fixtures directory](resource/fixtures). These custom fixtures enables the demo to have its own sample data and bypass the base fixtures provided by DigitalState, which are more developer centric.
+
+## Features
+
+...
+
+## Conclusion
+
+Now that we have gone thru a quick overview of the Platform, it is time to download the [Platform](https://github.com/DigitalState/Platform) repository and setup an instance of your own.
 
 ## Contributing
 
