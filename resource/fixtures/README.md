@@ -20,17 +20,17 @@ The available microservices names are:
 - records
 - services
 
-For demo purposes, we have created above fixtures overrides for each microservices.
+For demo purposes, we have created fixtures overrides for each microservices.
 
 ## Structure
 
-Fixtures are implemented as YML configuration files. Each files represents a specific type of data and contains a list of items of said type of data that will be loaded into the microservice.
+Fixtures are implemented as YML configuration files. Each files represents a list of items that will be loaded into the microservice.
 
 Each YML configuration files contains two attributes `items` and `prototype`.
 
-The `items` attribute describes the array of items wanted to be loaded into the known state. A `prototype` attribute is also present.
+The `items` attribute describes the array of items wanted to be loaded into the known state.
 
-The `prototype` attribute is a convenient feature that allows you to define sensible defaults for each `items` specified, while enabling you not having to redefine all attributes for each items.
+The `prototype` attribute is a convenient feature that allows you to define sensible defaults for each `items` specified.
 
 Consider the following [individuals fixtures](identities/identity/individual/identities.yml):
 
@@ -48,7 +48,7 @@ prototype:
     owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
 ```
 
-In the example above, we are wanting to load 2 individual identities in the known state, Morgan and Taylor. Both identities are owned by the same BusinessUnit. A convenient way to optimize this is to use the prototype attribute to define sensible defaults.
+In the example above, we are wanting to load 2 individual identities in the known state, **Morgan** and **Taylor**. Both identities are owned by the same BusinessUnit. A convenient way to optimize this is to use the prototype attribute to define sensible defaults.
 
 The Platform would interpret the above as followed:
 
