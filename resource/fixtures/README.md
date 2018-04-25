@@ -2,13 +2,13 @@
 
 The purpose of fixtures is to document the known state of the Platform, and most importantly, being able to revert back to that known state on demand. The known state includes all **Postgres database rows**, **Redis cache**, **Formio forms**, **Camunda BPMN workflows**, etc.
 
-By default, each microservices comes with its own set of fixtures, which are decentralized, very minimal and developer centric. However, it is possible to override these fixtures at the Platform level by creating your own here.
+By default, each microservice comes with its own set of fixtures, which are decentralized, very minimal and developer centric. However, it is possible to override these fixtures at the Platform level by creating your own here.
 
 Fixtures tend to be very useful for developers during development and debugging. They are also very convenient when wanting to showcase demos with specific sample data.
 
 ## Microservices
 
-The list of folders in this directory represents each microservices fixtures you wish to override. By default, this directory is empty, meaning the Platform will use the decentralized base fixtures found in each microservice. However, by creating folders in this directory, this will instruct the Platform to use these fixtures, instead of the base ones.
+The list of folders in this directory represents each microservice fixtures you wish to override. By default, this directory is empty, meaning the Platform will use the decentralized base fixtures found in each microservice. However, by creating folders in this directory, this will instruct the Platform to use these fixtures, instead of the base ones.
 
 The available microservices names are:
 
@@ -20,7 +20,7 @@ The available microservices names are:
 - records
 - services
 
-For demo purposes, we have created fixtures overrides for each microservices, which are exact duplicates of the base decentralized fixtures found in each microservices.
+For demo purposes, we have created fixtures overrides for each microservice, which are exact duplicates of the base decentralized fixtures found in each microservice.
 
 > Note: when overriding fixtures for a microservice, it is required to include all fixture files. It is not possible to just override specific files.
 
