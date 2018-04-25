@@ -34,7 +34,7 @@ The `items` attribute describes the array of items wanted to be loaded into the 
 
 The `prototype` attribute is a convenient feature that allows you to define sensible defaults for each `items` specified.
 
-Consider the following [individuals fixtures](identities/identity/individual/identities.yml):
+Consider the following [individuals fixtures](identities/identity/individual/identities.yml) where an Individual entity consists of a `uuid`, `owner` and `ownerUuid`:
 
 ```
 items:
