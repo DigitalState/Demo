@@ -1,10 +1,10 @@
 # Fixtures
 
-The purpose of fixtures is to document the known state of the Platform, and most importantly, being able to revert back to that known state on demand. The known state includes all Postgres database rows, Redis cache, Formio forms, Camunda BPMN workflows, etc.
+The purpose of fixtures is to document the known state of the Platform, and most importantly, being able to revert back to that known state on demand. The known state includes all **Postgres database rows**, **Redis cache**, **Formio forms**, **Camunda BPMN workflows**, etc.
 
 By default, the Platform comes with its own set of fixtures, which are very minimal and developer centric. However, it is possible to override these fixtures by creating your own here.
 
-Although fixtures tend to be very useful for developers during development, they are also very convenient when wanting to showcase demonstrations with pre-built sample data.
+Fixtures tend to be very useful for developers during development and debugging. They also are very convenient when wanting to showcase demos with specific sample data.
 
 ## Microservices
 
