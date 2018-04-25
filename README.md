@@ -29,7 +29,7 @@ This repository is essentially a clone of [Platform](https://github.com/DigitalS
 
 ### Ansible Inventory
 
-The DigitalState Platform contains an Ansible inventory file per environment. Each inventory files describes a wide range of configurations, from which servers Ansible is deploying to, to which microservices will be enabled, etc.
+> The DigitalState Platform contains an Ansible inventory file per environment. Each inventory files describes a wide range of configurations, from which servers Ansible is deploying to, to which microservices will be enabled, etc.
 
 Prior to deploying the Platform on the dev server, the dev inventory file needs to be configured.
 
@@ -41,11 +41,13 @@ The following configurations have been modified:
 
 ### Fixtures
 
-The purpose of fixtures is to document the known state of the Platform, and most importantly, being able to revert back to that known state on demand. The known state includes all Postgres database rows, Redis cache, Formio forms, Camunda BPMN workflows, etc.
+> The purpose of fixtures is to document the known state of the Platform, and most importantly, being able to revert back to that known state on demand. The known state includes all Postgres database rows, Redis cache, Formio forms, Camunda BPMN workflows, etc.
 
 Fixtures are often used for the purpose of setting up sample demo data during the first deployment of the Platform.
 
 Custom fixtures have been added to the [fixtures directory](resource/fixtures). These custom fixtures enables the demo to have its own sample data and bypass the base fixtures provided by DigitalState, which are more developer centric.
+
+For a better understanding on the structure of custom fixtures, [click here](resource/fixtures).
 
 ## Features
 
