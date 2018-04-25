@@ -8,7 +8,7 @@ Fixtures tend to be very useful for developers during development and debugging.
 
 ## Microservices
 
-The list of folders in this directory represents each microservices fixtures you wish to override. By default, this directory is empty, meaning the Platform will use the decentralized base fixtures found in each microservice. However, by creating folders in this directory, this will instruct the Platform to use these fixtures found here, instead of the base ones.
+The list of folders in this directory represents each microservices fixtures you wish to override. By default, this directory is empty, meaning the Platform will use the decentralized base fixtures found in each microservice. However, by creating folders in this directory, this will instruct the Platform to use these fixtures, instead of the base ones.
 
 The available microservices names are:
 
