@@ -4,7 +4,7 @@ The purpose of fixtures is to document the known state of the Platform, and most
 
 By default, each microservices comes with its own set of fixtures, which are decentralized, very minimal and developer centric. However, it is possible to override these fixtures at the Platform level by creating your own here.
 
-Fixtures tend to be very useful for developers during development and debugging. They also are very convenient when wanting to showcase demos with specific sample data.
+Fixtures tend to be very useful for developers during development and debugging. They are also very convenient when wanting to showcase demos with specific sample data.
 
 ## Microservices
 
