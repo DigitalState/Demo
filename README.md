@@ -25,7 +25,9 @@ For the purpose of the demo, we will assume the following context:
 
 ### Ansible Inventory
 
-The DigitalState Platform contains an Ansible inventory file per environment. Prior to deploying the Platform on the dev server, the dev inventory file needs to be configured.
+The DigitalState Platform contains an Ansible inventory file per environment. Each inventory files describes a wide range of configurations, from which servers its deploying to, to platform secrets, to which microservices will be enabled, etc.
+
+Prior to deploying the Platform on the dev server, the dev inventory file needs to be configured.
 
 The following configurations have been modified:
 
