@@ -5,14 +5,14 @@
       patterns: '.{{ tag }}'
       hidden: yes
       recurse: yes
-  register: result
+  register: _result
 
 - name: ...
   set_fact:
-      items: []
+      _items: []
 
 - name: ...
   set_fact:
-      items: '{{ items }} + [ "{{ item.path|dirname }}" ]'
-  with_items: '{{ result.files }}'
+      _items: '{{ _items }} + [ "{{ item.path|dirname }}" ]'
+  with_items: '{{ _result.files }}'
   no_log: true

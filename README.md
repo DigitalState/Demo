@@ -2,9 +2,9 @@
     <img src="https://avatars3.githubusercontent.com/u/12055994?s=200&v=4">
 </a></p>
 
-The platform repository provides a **set of tools** to help manage the DigitalState platform, from setting up a local environment for development to deploying to remote servers; from sandbox to production.
+The Platform repository provides a Docker container, with Ansible pre-installed, to help orchestrate instances of the DigitalState Platform. It comes with a **set of playbooks** which helps the developer manage local and remote servers; from sandbox to production.
 
-It uses **Docker** and **Ansible** to help with orchestration and is the central repository used by developers and devops.
+This is the central repository and starting point for developers.
 
 [![works badge](https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg)](platform/documentation/status/index.md)
 [![Build Status](https://travis-ci.org/DigitalState/Platform.svg?branch=master)](https://travis-ci.org/DigitalState/Platform)
@@ -21,34 +21,28 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 ## Synopsis
 
-1. **Install** Git and Docker on your local machine.
-2. **Download** the platform repository.
-3. **Boot** the platform container.
-4. **Execute** pre-built Ansible playbooks.
+1. **Install** Docker on your local machine.
+2. **Download** the Platform repository.
+3. **Boot** the Platform container.
+4. **Execute** Ansible playbooks to deploy instances.
 
 ## Requirements
 
-**For Linux:** Git, Docker, Docker Compose.
+- **Git**
+- **Docker**
+- **Docker Compose**
 
-**For Windows:** Windows Pro with HyperV, Git, DockerForWindows.
+If you are on _Windows_, **Windows Pro** with **HyperV** and **DockerForWindows** is required.
 
-**For Mac:** Git, DockerForMac.
+If you are on _Mac_, **DockerForMac** is required.
 
-> Note: Docker toolkit is not compatible.
+Docker toolkit is not compatible.
 
 ## Documentation
 
-#### General
-
-- [Status](platform/documentation/status/index.md)
-
-#### Environments
-
-- [Lab](platform/documentation/env/lab/index.md) - The lab environment is typically deployed to your local machine and is used to further develop the platform.
-- [Test](platform/documentation/env/test/index.md) - The test environment is typically deployed to a remote server and is used for continuous integration.
-- [Development](platform/documentation/env/dev/index.md) - The development environment is typically deployed to a remote server and is used as sandbox.
-- [Staging](platform/documentation/env/stag/index.md) - The staging environment is typically deployed to a remote server and is used as a pre-production mirror.
-- [Production](platform/documentation/env/prod/index.md) - The production environment is typically deployed to a remote server and is used to serve the latest release.
+- [User Guide](https://github.com/DigitalState/Guide)
+- [Developer Documentation](https://github.com/DigitalState/Documentation)
+- [Platform Documentation](https://github.com/DigitalState/Platform/blob/develop/platform/documentation/index.md)
 
 ## Contributing
 
