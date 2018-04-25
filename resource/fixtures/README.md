@@ -50,6 +50,8 @@ prototype:
     owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
 ```
 
+> Note: tilda (`~`) means null.
+
 In the example above, we are wanting to load 2 individual identities in the known state, **Morgan** and **Taylor**. Both identities are owned by the same BusinessUnit. A convenient way to optimize this is to use the prototype attribute to define sensible defaults.
 
 The Platform would interpret the above as followed:
