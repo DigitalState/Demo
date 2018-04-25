@@ -4,7 +4,7 @@ all:
       ansible_connection: local
     server:
 #      ansible_connection: local
-      ansible_host: ~
+      ansible_host: 1.2.3.4
       ansible_port: 22
       ansible_ssh_private_key_file: /root/.ssh/dev/key
   vars:
@@ -13,9 +13,9 @@ all:
     env: dev
     timezone: UTC
     encryption:
-      secret: ~
+      secret: 11111111111111111111111111111111
     jwt:
-      pass_phrase: ~
+      pass_phrase: 1111
     mail:
       transport: smtp
       host: 127.0.0.1
