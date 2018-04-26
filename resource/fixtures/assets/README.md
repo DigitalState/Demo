@@ -55,7 +55,7 @@ The properties are:
 - key: The key, or keys, from the list of defined keys this permission affects. For example: `user`.
 - attributes: The attributes granted by this permission. For example: `READ`.
 
-Given the above examples, whoever is assignes this permission would grant them the `READ` action on `user` entities that are owned by the `BusinessUnit` with uuid `a9d68bf7-5000-49fe-8b00-33dde235b327`.
+Given the above examples, whoever is assigned this permission would grant them the `READ` action on `user` entities that are owned by the `BusinessUnit` with uuid `a9d68bf7-5000-49fe-8b00-33dde235b327`.
 
 ### Asset Entity
 
