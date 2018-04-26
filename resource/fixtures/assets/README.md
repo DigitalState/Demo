@@ -59,7 +59,7 @@ Given the above examples, whoever is assigned this permission would grant them t
 
 ### Asset Entity
 
-A asset is a tangible documents issued by the government. For example: a deed to a land, a library card, a drivers license.
+An asset is a tangible documents issued by the government. For example: a deed to a land, a library card, a drivers license.
 
 The properties are:
 
