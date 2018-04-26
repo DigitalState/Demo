@@ -5,7 +5,7 @@
 ```
 .
 ├── access                           The access folder contains all access and permissions entities.
-|   |                                For organization purposes, accesses have been categorized by assignee types.
+│   │                                For organization purposes, accesses have been categorized by assignee types.
 │   ├── anonymous
 │   │   ├── accesses.yml             The access entities assigned to anonymous identities.
 │   │   └── permissions.yml          The permission entities assigned to anonymous identities.
