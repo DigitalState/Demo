@@ -133,7 +133,7 @@ The properties are:
 - password: The password.
 - data: The data of the registration. Typically contains first name, last name, various opt-ints and other registration related fields.
 
-For example, a drivers license created for Morgan owned by a BusinessUnit:
+For example, a user registration for Morgan owned by a BusinessUnit:
 
 ```
 items:
