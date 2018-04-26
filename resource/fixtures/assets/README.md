@@ -32,7 +32,7 @@
 
 ### Access Entity
 
-An access is assigned to a specific user and holds one or more permissions. Accesses are used by the security component to validate user actions by granting or denying access.
+An access is assigned to a specific user and holds one or more permissions. Accesses are compiled and used by the security component to validate user actions by granting or denying them access based on whats configured for them.
 
 The properties are:
 
