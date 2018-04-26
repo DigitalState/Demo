@@ -36,7 +36,11 @@ An access is assigned to a specific user and holds one or more permissions. Acce
 
 The properties are:
 
--
+- uuid: The access uuid. For example: `859e68e2-1c4c-4730-aab7-d51f5a399dec`.
+- owner: The owner of the asset. For example: `BusinessUnit`.
+- owner_uuid: The owner uuid of the asset. For example: `c11c546e-bd01-47cf-97da-e25388357b5a` (Administration)
+- assignee: The assignee the access is created for. For example `Individual`.
+- assignee_uuid: The assignee uuid the access is created for. For example `d0daa7e4-07d1-47e6-93f2-0629adaa3b49` (Morgan).
 
 ### Permission Entity
 
@@ -44,7 +48,14 @@ A permission is a grant regarding a specific action. For example: "READ users", 
 
 The properties are:
 
--
+- access: The access which holds this permission. For example: `859e68e2-1c4c-4730-aab7-d51f5a399dec`.
+- scope: The permission scope. Available values: `entity`, `object`, `owner`, `session`. For example: `owner`.
+- entity: The entity this permission affects based on the scope. For example: `BusinessUnit`.
+- entity_uuid: The entity uuid this permission affects based on the scope. For example: `a9d68bf7-5000-49fe-8b00-33dde235b327`.
+- key: The key, or keys, from the list of defined keys this permission affects. For example: `user`.
+- attributes: The attributes granted by this permission. For example: `READ`.
+
+Given the above examples, whoever is assignes this permission would grant them the `READ` action on `user` entities that are owned by the `BusinessUnit` with uuid `a9d68bf7-5000-49fe-8b00-33dde235b327`.
 
 ### Asset Entity
 
@@ -65,4 +76,9 @@ A config is a low-level microservice configuration. Each microservice contains i
 
 The properties are:
 
--
+- uuid: The config uuid. For example: `8a457c70-9472-4428-9280-cd0ae92d0f09`.
+- owner: The owner of the config. For example: `BusinessUnit`.
+- owner_uuid: The owner uuid of the config. For example: `c11c546e-bd01-47cf-97da-e25388357b5a` (Administration)
+- key: The unique, machine-friendly name of the config. For example: `case.pagination.default_limit`.
+- value: The value of the config. For example: `10`.
+- enabled: Whether the config is enabled or not. If a config is disabled, it will be bypassed by the default value set in low level, file-based, configurations. For example: `true`.
