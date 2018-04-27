@@ -1,4 +1,4 @@
-# Assets Microservice
+# Identities Microservice
 
 ## Fixtures File Structure
 
@@ -25,7 +25,25 @@
 │       ├── accesses.yml             The access entities assigned to system identities.
 │       └── permissions.yml          The permission entities assigned to system identities.
 │
-├── assets.yml                       The asset entities.
+├── identity                         The identity folder contains all identity and persona entities.
+│   │                                For organization purposes, identities have been categorized by identity types.
+│   ├── anonymous
+│   │   ├── identities.yml           The anonymous identity entities.
+│   │   └── personas.yml             The anonymous personas entities.
+│   ├── individual
+│   │   ├── identities.yml           The individual identity entities.
+│   │   └── personas.yml             The individual personas entities.
+│   ├── organization
+│   │   ├── identities.yml           The organization identity entities.
+│   │   └── personas.yml             The organization personas entities.
+│   ├── staff
+│   │   ├── identities.yml           The staff identity entities.
+│   │   └── personas.yml             The staff personas entities.
+│   └── system
+│       └── identities.yml           The system identity entities.
+│
+├── business_units.yml               The business unit entities.
+├── roles.yml                        The role entities.
 └── configs.yml                      The config entities.
 ```
 
@@ -105,32 +123,4 @@ items:
         key: case.pagination.default_limit
         value: 10
         enabled: true
-```
-
-### Asset Entity
-
-An asset is a tangible documents issued by the government. For example: a deed to a land, a library card, a drivers license.
-
-The properties are:
-
-- uuid: The asset uuid.
-- owner: The owner of the asset.
-- owner_uuid: The owner uuid of the asset.
-- identity: The identity the asset is created for.
-- identity_uuid: The identity uuid the asset is created for.
-- title: The title of the asset. This field is translatable.
-
-For example, a drivers license created for Morgan owned by a BusinessUnit:
-
-```
-items:
-    -
-        uuid: 238fecd9-3911-4593-a5a5-b3f693248283
-        owner: BusinessUnit
-        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
-        identity: Individual
-        identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
-        title:
-            fr: Permis
-            en: Permit
 ```

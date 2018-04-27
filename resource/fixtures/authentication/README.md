@@ -1,10 +1,10 @@
-# Assets Microservice
+# Authentication Microservice
 
 ## Fixtures File Structure
 
 ```
 .
-├── access                           The access folder contains all access and permissions entities.
+├── access                           The access folder contains all access and permission entities.
 │   │                                For organization purposes, accesses have been categorized by assignee types.
 │   ├── anonymous
 │   │   ├── accesses.yml             The access entities assigned to anonymous identities.
