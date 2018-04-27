@@ -25,7 +25,7 @@
 │       ├── accesses.yml             The access entities assigned to system identities.
 │       └── permissions.yml          The permission entities assigned to system identities.
 │
-├── assets.yml                       The assets entities.
+├── assets.yml                       The asset entities.
 └── configs.yml                      The config entities.
 ```
 

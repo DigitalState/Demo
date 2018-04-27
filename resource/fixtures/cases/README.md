@@ -26,7 +26,7 @@
 │       └── permissions.yml          The permission entities assigned to system identities.
 │
 ├── case_statuses.yml                The case status entities.
-├── cases.yml                        The cases entities.
+├── cases.yml                        The case entities.
 └── configs.yml                      The config entities.
 ```
 
