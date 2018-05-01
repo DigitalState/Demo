@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         uuid: e049f2b4-b249-48c2-850c-64d4c4b39527
         owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice

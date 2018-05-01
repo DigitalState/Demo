@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         uuid: e32f09b7-e1cf-4a91-a0e1-6822bf47a662 # Admin
         owner_uuid: c11c546e-bd01-47cf-97da-e25388357b5a # Administration

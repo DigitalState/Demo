@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         access: 95e1c792-f085-4d22-85ff-5ad8f43408b9 # System
         key: entity

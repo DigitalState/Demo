@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         uuid: eae893c8-3ec9-4536-928f-a5a51105dfa7
         key: app.spa.admin

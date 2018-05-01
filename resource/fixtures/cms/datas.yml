@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         uuid: c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0
         owner_uuid: b20a40d9-b95b-4462-b8f1-c7453b9b7067 # Portal

@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         uuid: a295c397-0dc7-40eb-b4a2-7c2278bf41d2
         assignee_uuid: 5ab54dd5-56ed-4e96-bd8b-1d60ab668a75 # Administrator

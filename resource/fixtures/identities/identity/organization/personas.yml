@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         organization: c9599da5-35a8-494c-9181-975d78be9694 # Acme
         uuid: 1b23a845-873a-4e74-b086-497f06d34930

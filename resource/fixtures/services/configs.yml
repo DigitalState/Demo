@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         uuid: 39cc2930-0de7-4173-8ca4-da8e01863afb
         key: app.bpm.variables.api_url

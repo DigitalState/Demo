@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         uuid: d497ab6c-22a4-426e-9b8b-93f06c5618bc
         key: ds_api.user.username

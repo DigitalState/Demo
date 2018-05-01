@@ -56,7 +56,7 @@ The properties are:
 For example, an access card owned by a `BusinessUnit` and assigned to an `Individual`:
 
 ```
-items:
+fixtures:
     -
         uuid: 859e68e2-1c4c-4730-aab7-d51f5a399dec
         owner: BusinessUnit
@@ -81,7 +81,7 @@ The properties are:
 For example, a permission held by an access card which grants `READ` action on `user` entities owned by a `BusinessUnit`:
 
 ```
-items:
+fixtures:
     -
         access: 859e68e2-1c4c-4730-aab7-d51f5a399dec
         scope: owner
@@ -107,7 +107,7 @@ The properties are:
 For example, a config that sets the default pagination limit for cases listing:
 
 ```
-items:
+fixtures:
     -
         uuid: 8a457c70-9472-4428-9280-cd0ae92d0f09
         owner: BusinessUnit
@@ -138,7 +138,7 @@ The properties are:
 For example, a category owned by a Business unit:
 
 ```
-items:
+fixtures:
     -
         uuid: ecc69524-0b12-4eae-a6f4-b6eb0f442e29
         owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
@@ -177,7 +177,7 @@ The properties are:
 For example, a service owned by a Business unit:
 
 ```
-items:
+fixtures:
     -
         uuid: 9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d
         owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
@@ -216,7 +216,7 @@ The properties are:
 For example, a bpm scenario linked to a camunda workflow and owned by a Business unit:
 
 ```
-items:
+fixtures:
     -
         uuid: e049f2b4-b249-48c2-850c-64d4c4b39527
         owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
@@ -258,7 +258,7 @@ The properties are:
 For example, a report-a-pothole bpmn deployment:
 
 ```
-items:
+fixtures:
     -
         name: Pothole Report
         files:
@@ -285,7 +285,7 @@ The properties are:
 For example, a report-a-pothole submit form:
 
 ```
-items:
+fixtures:
     -
         title: Pothole Report
         display: form

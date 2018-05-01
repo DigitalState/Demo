@@ -1,4 +1,4 @@
-items:
+fixtures:
     -
         access: a295c397-0dc7-40eb-b4a2-7c2278bf41d2 # Administrator
         scope: owner

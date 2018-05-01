@@ -64,7 +64,7 @@ The properties are:
 For example, an access card owned by a `BusinessUnit` and assigned to an `Individual`:
 
 ```
-items:
+fixtures:
     -
         uuid: 859e68e2-1c4c-4730-aab7-d51f5a399dec
         owner: BusinessUnit
@@ -89,7 +89,7 @@ The properties are:
 For example, a permission held by an access card which grants `READ` action on `user` entities owned by a `BusinessUnit`:
 
 ```
-items:
+fixtures:
     -
         access: 859e68e2-1c4c-4730-aab7-d51f5a399dec
         scope: owner
@@ -115,7 +115,7 @@ The properties are:
 For example, a config that sets the default pagination limit for cases listing:
 
 ```
-items:
+fixtures:
     -
         uuid: 8a457c70-9472-4428-9280-cd0ae92d0f09
         owner: BusinessUnit
@@ -138,7 +138,7 @@ The properties are:
 For example, an anonymous identity owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         uuid: e3d95fa0-5661-4213-b5a4-36b7cded0207
         owner: BusinessUnit
@@ -161,7 +161,7 @@ The properties are:
 For example, an anonymous identity persona owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         anonymous: e3d95fa0-5661-4213-b5a4-36b7cded0207
         uuid: 28cd2b1f-c930-4f64-8e81-29c11ad71aee
@@ -188,7 +188,7 @@ The properties are:
 For example, an individual identity owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         uuid: 4c084c20-8ea6-45ff-b60c-68fc04098244
         owner: BusinessUnit
@@ -211,7 +211,7 @@ The properties are:
 For example, an individual identity persona owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         individual: 4c084c20-8ea6-45ff-b60c-68fc04098244
         uuid: 28cd2b1f-c930-4f64-8e81-29c11ad71aee
@@ -238,7 +238,7 @@ The properties are:
 For example, an organization identity owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         uuid: 290d1d9a-07dd-416f-9327-a81eb02eb7dd
         owner: BusinessUnit
@@ -261,7 +261,7 @@ The properties are:
 For example, an organization identity persona owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         organization: 290d1d9a-07dd-416f-9327-a81eb02eb7dd
         uuid: 28cd2b1f-c930-4f64-8e81-29c11ad71aee
@@ -289,7 +289,7 @@ The properties are:
 For example, an staff identity owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         uuid: 4c084c20-8ea6-45ff-b60c-68fc04098244
         owner: BusinessUnit
@@ -314,7 +314,7 @@ The properties are:
 For example, an staff identity persona owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         staff: 4c084c20-8ea6-45ff-b60c-68fc04098244
         uuid: 28cd2b1f-c930-4f64-8e81-29c11ad71aee
@@ -341,7 +341,7 @@ The properties are:
 For example, an system identity owned by itself:
 
 ```
-items:
+fixtures:
     -
         uuid: 00dc1842-f6fa-4c5a-aada-71c97fd0e9ff
         owner: System
@@ -362,7 +362,7 @@ The properties are:
 For example, an staff identity owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         uuid: ddec6583-f526-4397-99e1-cef658d3953a
         owner: BusinessUnit
@@ -387,7 +387,7 @@ The properties are:
 For example, an staff identity owned by a business unit:
 
 ```
-items:
+fixtures:
     -
         uuid: 6187de05-1550-4bd7-a71d-7237ecced34c
         owner: BusinessUnit
