@@ -124,3 +124,226 @@ items:
         value: 10
         enabled: true
 ```
+
+### Anonymous Entity
+
+An anonymous entity represents an identity that has yet to authenticate itself. It is typically used for non-authenticated interactions.
+
+The properties are:
+
+- uuid: The anonymous uuid.
+- owner: The owner of the anonymous identity.
+- owner_uuid: The owner uuid of the anonymous identity.
+
+For example, an anonymous identity owned by a business unit:
+
+```
+items:
+    -
+        uuid: e3d95fa0-5661-4213-b5a4-36b7cded0207
+        owner: BusinessUnit
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+```
+
+### AnonymousPersona Entity
+
+An anonymous persona entity represents a persona for an anonymous identity. It typically contains personal information such as first and last names, email, etc
+
+The properties are:
+
+- anonymous: The anonymous identity associated with the persona.
+- uuid: The anonymous persona uuid.
+- owner: The owner of the anonymous identity persona.
+- owner_uuid: The owner uuid of the anonymous identity persona.
+- title: The identity persona title. This field is translatable.
+- data: The persona data.
+
+For example, an anonymous identity persona owned by a business unit:
+
+```
+items:
+    -
+        anonymous: e3d95fa0-5661-4213-b5a4-36b7cded0207
+        uuid: 28cd2b1f-c930-4f64-8e81-29c11ad71aee
+        owner: BusinessUnit
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        title:
+            en: My Persona
+            fr: Mon profil
+        data:
+            first_name: Morgan
+            last_name: Cole
+```
+
+### Individual Entity
+
+An individual entity represents an identity of type Individual. It is typically used for citizens.
+
+The properties are:
+
+- uuid: The individual uuid.
+- owner: The owner of the individual identity.
+- owner_uuid: The owner uuid of the individual identity.
+
+For example, an individual identity owned by a business unit:
+
+```
+items:
+    -
+        uuid: 4c084c20-8ea6-45ff-b60c-68fc04098244
+        owner: BusinessUnit
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+```
+
+### IndividualPersona Entity
+
+An individual persona entity represents a persona for an individual identity. It typically contains personal information such as first and last names, email, etc
+
+The properties are:
+
+- individual: The individual identity associated with the persona.
+- uuid: The individual persona uuid.
+- owner: The owner of the individual identity persona.
+- owner_uuid: The owner uuid of the individual identity persona.
+- title: The identity persona title. This field is translatable.
+- data: The persona data.
+
+For example, an individual identity persona owned by a business unit:
+
+```
+items:
+    -
+        individual: 4c084c20-8ea6-45ff-b60c-68fc04098244
+        uuid: 28cd2b1f-c930-4f64-8e81-29c11ad71aee
+        owner: BusinessUnit
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        title:
+            en: My Persona
+            fr: Mon profil
+        data:
+            first_name: Morgan
+            last_name: Cole
+```
+
+### Organization Entity
+
+An organization entity represents an identity of type Organization. It is typically used for organizations.
+
+The properties are:
+
+- uuid: The organization uuid.
+- owner: The owner of the organization identity.
+- owner_uuid: The owner uuid of the organization identity.
+
+For example, an organization identity owned by a business unit:
+
+```
+items:
+    -
+        uuid: 290d1d9a-07dd-416f-9327-a81eb02eb7dd
+        owner: BusinessUnit
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+```
+
+### OrganizationPersona Entity
+
+An organization persona entity represents a persona for an organization identity. It typically contains personal information such as first and last names, email, etc
+
+The properties are:
+
+- organization: The organization identity associated with the persona.
+- uuid: The organization persona uuid.
+- owner: The owner of the organization identity persona.
+- owner_uuid: The owner uuid of the organization identity persona.
+- title: The identity persona title. This field is translatable.
+- data: The persona data.
+
+For example, an organization identity persona owned by a business unit:
+
+```
+items:
+    -
+        organization: 290d1d9a-07dd-416f-9327-a81eb02eb7dd
+        uuid: 28cd2b1f-c930-4f64-8e81-29c11ad71aee
+        owner: BusinessUnit
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        title:
+            en: My Persona
+            fr: Mon profil
+        data:
+            name: Acme Corp
+            number: 123456
+```
+
+### Staff Entity
+
+An staff entity represents an identity of type Staff. It is typically used for backoffice staff members and administrators.
+
+The properties are:
+
+- uuid: The staff uuid.
+- owner: The owner of the staff identity.
+- owner_uuid: The owner uuid of the staff identity.
+- business_units: The business units the staff is subscribed to.
+
+For example, an staff identity owned by a business unit:
+
+```
+items:
+    -
+        uuid: 4c084c20-8ea6-45ff-b60c-68fc04098244
+        owner: BusinessUnit
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        business_units:
+            - a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+```
+
+### StaffPersona Entity
+
+An staff persona entity represents a persona for an staff identity. It typically contains personal information such as first and last names, email, etc
+
+The properties are:
+
+- staff: The staff identity associated with the persona.
+- uuid: The staff persona uuid.
+- owner: The owner of the staff identity persona.
+- owner_uuid: The owner uuid of the staff identity persona.
+- title: The identity persona title. This field is translatable.
+- data: The persona data.
+
+For example, an staff identity persona owned by a business unit:
+
+```
+items:
+    -
+        staff: 4c084c20-8ea6-45ff-b60c-68fc04098244
+        uuid: 28cd2b1f-c930-4f64-8e81-29c11ad71aee
+        owner: BusinessUnit
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        title:
+            en: My Persona
+            fr: Mon profil
+        data:
+            first_name: Morgan
+            last_name: Cole
+```
+
+### System Entity
+
+An system entity represents an identity of type System. It is typically used by the system to interact with other microservices.
+
+The properties are:
+
+- uuid: The system uuid.
+- owner: The owner of the system identity.
+- owner_uuid: The owner uuid of the system identity.
+
+For example, an system identity owned by itself:
+
+```
+items:
+    -
+        uuid: 00dc1842-f6fa-4c5a-aada-71c97fd0e9ff
+        owner: System
+        owner_uuid: 00dc1842-f6fa-4c5a-aada-71c97fd0e9ff
+```
