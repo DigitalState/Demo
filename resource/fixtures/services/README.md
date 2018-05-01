@@ -242,3 +242,131 @@ items:
                 button_text: Activer
         weight: 0
 ```
+
+## Camunda
+
+### Deployment
+
+A camunda deployment.
+
+The properties are:
+
+- name: The deployment name
+- source: The deployment source
+- files: The files associated with the deployment. Typically contains bpmn files, etc.
+
+For example, a report-a-pothole bpmn deployment:
+
+```
+items:
+    -
+        name: Pothole Report
+        files:
+            - bpmn/pothole-report.bpmn
+```
+
+## Formio
+
+### Forms
+
+A formio form.
+
+The properties are:
+
+- title: The form title.
+- display: The form display setting. Possible values are "form" and "wizard".
+- type: The form type.
+- name: The form name.
+- path: The form path.
+- tags: The form tags.
+- components: The form components.
+- submission_access: The form submission accesses.
+
+For example, a report-a-pothole submit form:
+
+```
+items:
+    -
+        title: Pothole Report
+        display: form
+        type: form
+        name: pothole-report
+        path: pothole-report
+        tags:
+            - pothole
+        components:
+            -
+                input: true
+                tableView: true
+                inputType: text
+                inputMask: ''
+                label: Description
+                key: description
+                placeholder: ''
+                prefix: ''
+                suffix: ''
+                multiple: false
+                defaultValue: ''
+                protected: false
+                unique: false
+                persistent: true
+                hidden: false
+                clearOnHide: true
+                validate:
+                    required: true
+                    minLength: ''
+                    maxLength: ''
+                    pattern: ''
+                    custom: ''
+                    customPrivate: false
+                conditional:
+                    show: ''
+                    when:
+                    eq: ''
+                type: textfield
+                hideLabel: false
+                labelPosition: top
+                tags: []
+                properties: {}
+
+            -
+                input: true
+                label: Submit
+                tableView: false
+                key: submit
+                size: md
+                leftIcon: ''
+                rightIcon: ''
+                block: false
+                action: submit
+                disableOnInvalid: false
+                theme: primary
+                type: button
+                hideLabel: false
+        submission_access:
+            -
+                type: create_all
+                roles: []
+            -
+                type: read_all
+                roles: []
+            -
+                type: update_all
+                roles: []
+            -
+                type: delete_all
+                roles: []
+            -
+                type: create_own
+                roles:
+                    - anonymous
+            -
+                type: read_own
+                roles: []
+            -
+                type: update_own
+                roles: []
+            -
+                type: delete_own
+                roles: []
+```
