@@ -25,8 +25,18 @@
 │       ├── accesses.yml             The access entities assigned to system identities.
 │       └── permissions.yml          The permission entities assigned to system identities.
 │
-├── assets.yml                       The assets entities.
-└── configs.yml                      The config entities.
+├── camunda
+│   ├── bpmn
+│   │   └── pothole-report.bpmn
+│   └── deployments.yml              The camunda deployments.
+│
+├── categories.yml                   The categories entities.
+├── configs.yml                      The config entities.
+├── formio
+│   └── forms.yml                    The formio forms.
+│
+├── scenarios.yml                    The scenario entities.
+└── services.yml                     The services entities.
 ```
 
 ## Entities
@@ -105,4 +115,130 @@ items:
         key: case.pagination.default_limit
         value: 10
         enabled: true
+```
+
+### Category Entity
+
+A category represents a grouping of services.
+
+The properties are:
+
+- uuid: The category uuid.
+- owner: The owner of the category.
+- owner_uuid: The owner uuid of the category.
+- slug: The unique, machine name of the category.
+- title: The category title. This field is translatable.
+- description: The category short description. This field is translatable.
+- presentation: The category long description. This field is translatable.
+- data: The category data. This field is used to store misc information outside the conceived schema.
+- enabled: The category enabled status.
+- weight: The category weight. This is used for custom ordering.
+- services: The services inside the category.
+
+For example, a category owned by a Business unit:
+
+```
+items:
+    -
+        uuid: ecc69524-0b12-4eae-a6f4-b6eb0f442e29
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        slug: infrastructure
+        title:
+            en: Infrastructure
+            fr: Infrastructure
+        description:
+            en: Description ...
+            fr: Description ...
+        presentation:
+            en: Presentation ...
+            fr: Presentation ...
+        services:
+            - 9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d # Report a Pothole
+            - 52d4797d-aeba-4933-8775-e44901cf5f2d # Report a Graffiti
+```
+
+### Service Entity
+
+A service represents a digital service offered by the government.
+
+The properties are:
+
+- uuid: The service uuid.
+- owner: The owner of the service.
+- owner_uuid: The owner uuid of the service.
+- slug: The unique, machine name of the service.
+- title: The service title. This field is translatable.
+- description: The service short description. This field is translatable.
+- presentation: The service long description. This field is translatable.
+- data: The service data. This field is used to store misc information outside the conceived schema.
+- enabled: The service enabled status.
+- weight: The service weight. This is used for custom ordering.
+
+For example, a service owned by a Business unit:
+
+```
+items:
+    -
+        uuid: 9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        slug: report-pothole
+        title:
+            en: Report a Pothole
+            fr: Signaler un nids de poule
+        description:
+            en: Description ...
+            fr: Description ...
+        presentation:
+            en: Presentation ...
+            fr: Presentation ...
+```
+
+### Scenario Entity
+
+A scenario represents a channel by which you can apply for a service offered by the government. For example, the online scenario, the by-phone scenario, etc.
+
+The properties are:
+
+- uuid: The scenario uuid.
+- owner: The owner of the scenario.
+- owner_uuid: The owner uuid of the scenario.
+- service: The service associated with the scenario.
+- type: The scenario type. Possible values are "bpm".
+- config: The scenario configurations, which depends on the scenario type.
+- slug: The unique, machine name of the scenario.
+- title: The scenario title. This field is translatable.
+- description: The scenario short description. This field is translatable.
+- presentation: The scenario long description. This field is translatable.
+- data: The scenario data. This field is used to store misc information outside the conceived schema.
+- enabled: The scenario enabled status.
+- weight: The scenario weight. This is used for custom ordering.
+
+For example, a bpm scenario linked to a camunda workflow and owned by a Business unit:
+
+```
+items:
+    -
+        uuid: e049f2b4-b249-48c2-850c-64d4c4b39527
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        service: 9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d # Report a Pothole
+        type: bpm
+        config:
+            bpm: camunda
+            process_definition_key: pothole-report
+        slug: online
+        title:
+            en: Report a Pothole Online
+            fr: Signaler un nids de poule en-ligne
+        description:
+            en: Description ...
+            fr: Description ...
+        presentation:
+            en: Presentation ...
+            fr: Présentation ...
+        data:
+            en:
+                button_text: Activate
+            fr:
+                button_text: Activer
+        weight: 0
 ```
