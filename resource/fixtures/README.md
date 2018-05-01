@@ -219,9 +219,9 @@ items:
   priority: 0
 ```
 
-5. Adjust the value of foreign keys from `entity-name/uuid` to just `uuid`.
+5. Adjust the value of foreign keys from `entity-name/uuid` to just `uuid`. In some cases, you may need to add the foreign keys according to the examples (see case status fixtures example).
 
-6. Envelop the fixtures with a `fixtures` property
+6. Envelop the fixtures with a `fixtures` property:
 
 ```
 fixtures:
