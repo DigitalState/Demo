@@ -68,3 +68,193 @@ items:
         owner: BusinessUnit
         owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
 ```
+
+## Creating fixtures from database rows
+
+1. In Postman, login as the system identity.
+
+2. In Postman, do a GET request on the entity you wish to generate fixtures for. For example: GET /cases:
+
+```
+[
+    {
+        "id": 15,
+        "uuid": "82184661-3aa4-4c68-a130-e07dc2e0d974",
+        "customId": "GOV-82184661",
+        "createdAt": "2018-04-27T19:17:10+00:00",
+        "updatedAt": "2018-04-27T19:17:10+00:00",
+        "deletedAt": null,
+        "owner": "BusinessUnit",
+        "ownerUuid": "a9d68bf7-5000-49fe-8b00-33dde235b327",
+        "identity": "Individual",
+        "identityUuid": "d0daa7e4-07d1-47e6-93f2-0629adaa3b49",
+        "title": {
+            "en": "Pothole - 123 Street - Urgent",
+            "fr": "Nid-de-poule - 123 rue - urgent"
+        },
+        "data": {
+            "en": [],
+            "fr": []
+        },
+        "state": "open",
+        "priority": 0,
+        "statuses": [
+            "/app_dev.php/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6",
+            "/app_dev.php/case-statuses/1739b92f-9ce9-4f7d-92ff-6314171794b4",
+            "/app_dev.php/case-statuses/5a438bff-afa9-489d-953f-4524ca0905cb",
+            "/app_dev.php/case-statuses/0a42016c-c625-4025-becf-b7dc98db44f8",
+            "/app_dev.php/case-statuses/02a74181-c59d-459a-acaf-64c7a597f6b7",
+            "/app_dev.php/case-statuses/40f6af60-b55b-4eee-a8db-71eec55fc8f5"
+        ],
+        "version": 1
+    },
+    {
+        "id": 16,
+        "uuid": "788e4c03-b97b-4f5c-8024-cd128121ca11",
+        "customId": "GOV-788e4c03",
+        "createdAt": "2018-04-27T19:17:10+00:00",
+        "updatedAt": "2018-04-27T19:17:10+00:00",
+        "deletedAt": null,
+        "owner": "BusinessUnit",
+        "ownerUuid": "a9d68bf7-5000-49fe-8b00-33dde235b327",
+        "identity": "Staff",
+        "identityUuid": "5449ce65-5df0-440d-aead-21a77907e59a",
+        "title": {
+            "en": "Pothole - Quality Review",
+            "fr": "Nid-de-poule - Examen de la qualité"
+        },
+        "data": {
+            "en": [],
+            "fr": []
+        },
+        "state": "open",
+        "priority": 0,
+        "statuses": [],
+        "version": 1
+    }
+]
+```
+
+3. Convert the JSON formatted response to YAML format using an [online tool](https://www.json2yaml.com):
+
+```
+- id: 15
+  uuid: 82184661-3aa4-4c68-a130-e07dc2e0d974
+  customId: GOV-82184661
+  createdAt: '2018-04-27T19:17:10+00:00'
+  updatedAt: '2018-04-27T19:17:10+00:00'
+  deletedAt:
+  owner: BusinessUnit
+  ownerUuid: a9d68bf7-5000-49fe-8b00-33dde235b327
+  identity: Individual
+  identityUuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49
+  title:
+    en: Pothole - 123 Street - Urgent
+    fr: Nid-de-poule - 123 rue - urgent
+  data:
+    en: []
+    fr: []
+  state: open
+  priority: 0
+  statuses:
+  - "/app_dev.php/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6"
+  - "/app_dev.php/case-statuses/1739b92f-9ce9-4f7d-92ff-6314171794b4"
+  - "/app_dev.php/case-statuses/5a438bff-afa9-489d-953f-4524ca0905cb"
+  - "/app_dev.php/case-statuses/0a42016c-c625-4025-becf-b7dc98db44f8"
+  - "/app_dev.php/case-statuses/02a74181-c59d-459a-acaf-64c7a597f6b7"
+  - "/app_dev.php/case-statuses/40f6af60-b55b-4eee-a8db-71eec55fc8f5"
+  version: 1
+- id: 16
+  uuid: 788e4c03-b97b-4f5c-8024-cd128121ca11
+  customId: GOV-788e4c03
+  createdAt: '2018-04-27T19:17:10+00:00'
+  updatedAt: '2018-04-27T19:17:10+00:00'
+  deletedAt:
+  owner: BusinessUnit
+  ownerUuid: a9d68bf7-5000-49fe-8b00-33dde235b327
+  identity: Staff
+  identityUuid: 5449ce65-5df0-440d-aead-21a77907e59a
+  title:
+    en: Pothole - Quality Review
+    fr: Nid-de-poule - Examen de la qualité
+  data:
+    en: []
+    fr: []
+  state: open
+  priority: 0
+  statuses: []
+  version: 1
+```
+
+4. Remove unneeded properties, such as id's and created/updated dates, the for yml to be compatible with the examples provided:
+
+```
+- uuid: 82184661-3aa4-4c68-a130-e07dc2e0d974
+  customId: GOV-82184661
+  owner: BusinessUnit
+  ownerUuid: a9d68bf7-5000-49fe-8b00-33dde235b327
+  identity: Individual
+  identityUuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49
+  title:
+    en: Pothole - 123 Street - Urgent
+    fr: Nid-de-poule - 123 rue - urgent
+  data:
+    en: []
+    fr: []
+  state: open
+  priority: 0
+  version: 1
+- uuid: 788e4c03-b97b-4f5c-8024-cd128121ca11
+  customId: GOV-788e4c03
+  owner: BusinessUnit
+  ownerUuid: a9d68bf7-5000-49fe-8b00-33dde235b327
+  identity: Staff
+  identityUuid: 5449ce65-5df0-440d-aead-21a77907e59a
+  title:
+    en: Pothole - Quality Review
+    fr: Nid-de-poule - Examen de la qualité
+  data:
+    en: []
+    fr: []
+  state: open
+  priority: 0
+  version: 1
+```
+
+5. Adjust the value of foreign keys from `entity-name/uuid` to just `uuid`.
+
+6. Envelop the fixtures with a `fixtures` property
+
+```
+fixtures:
+  - uuid: 82184661-3aa4-4c68-a130-e07dc2e0d974
+    customId: GOV-82184661
+    owner: BusinessUnit
+    ownerUuid: a9d68bf7-5000-49fe-8b00-33dde235b327
+    identity: Individual
+    identityUuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49
+    title:
+      en: Pothole - 123 Street - Urgent
+      fr: Nid-de-poule - 123 rue - urgent
+    data:
+      en: []
+      fr: []
+    state: open
+    priority: 0
+    version: 1
+  - uuid: 788e4c03-b97b-4f5c-8024-cd128121ca11
+    customId: GOV-788e4c03
+    owner: BusinessUnit
+    ownerUuid: a9d68bf7-5000-49fe-8b00-33dde235b327
+    identity: Staff
+    identityUuid: 5449ce65-5df0-440d-aead-21a77907e59a
+    title:
+      en: Pothole - Quality Review
+      fr: Nid-de-poule - Examen de la qualité
+    data:
+      en: []
+      fr: []
+    state: open
+    priority: 0
+    version: 1
+```
