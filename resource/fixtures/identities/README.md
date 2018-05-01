@@ -277,7 +277,7 @@ items:
 
 ### Staff Entity
 
-An staff entity represents an identity of type Staff. It is typically used for backoffice staff members and administrators.
+A staff entity represents an identity of type Staff. It is typically used for backoffice staff members and administrators.
 
 The properties are:
 
@@ -300,7 +300,7 @@ items:
 
 ### StaffPersona Entity
 
-An staff persona entity represents a persona for an staff identity. It typically contains personal information such as first and last names, email, etc
+A staff persona entity represents a persona for an staff identity. It typically contains personal information such as first and last names, email, etc
 
 The properties are:
 
@@ -330,7 +330,7 @@ items:
 
 ### System Entity
 
-An system entity represents an identity of type System. It is typically used by the system to interact with other microservices.
+A system entity represents an identity of type System. It is typically used by the system to interact with other microservices.
 
 The properties are:
 
@@ -347,3 +347,60 @@ items:
         owner: System
         owner_uuid: 00dc1842-f6fa-4c5a-aada-71c97fd0e9ff
 ```
+
+### Business Unit Entity
+
+A business unit entity represents a department within government.
+
+The properties are:
+
+- uuid: The business unit uuid.
+- owner: The owner of the business unit.
+- owner_uuid: The owner uuid of the business unit.
+- title: The title of the business unit. This field is translatable.
+
+For example, an staff identity owned by a business unit:
+
+```
+items:
+    -
+        uuid: ddec6583-f526-4397-99e1-cef658d3953a
+        owner: BusinessUnit
+        owner_uuid: c11c546e-bd01-47cf-97da-e25388357b5a # Administration
+        title:
+            en: Backoffice
+            fr: Bureau
+```
+
+### Role Entity
+
+A role entity represents a collection of access permissions accross all microservers.
+
+The properties are:
+
+- uuid: The role uuid.
+- owner: The owner of the role.
+- owner_uuid: The owner uuid of the role.
+- title: The title of the role. This field is translatable.
+- permissions: The list of permissions.
+
+For example, an staff identity owned by a business unit:
+
+```
+items:
+    -
+        uuid: 6187de05-1550-4bd7-a71d-7237ecced34c
+        owner: BusinessUnit
+        owner_uuid: c11c546e-bd01-47cf-97da-e25388357b5a # Administration
+        title:
+            en: Administrator
+            fr: Administrateur
+        permissions:
+            assets:
+                ...
+            authentication:
+                ...
+            cases:
+                ...
+```
+
