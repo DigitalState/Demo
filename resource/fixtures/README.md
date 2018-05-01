@@ -254,3 +254,5 @@ fixtures:
     state: open
     priority: 0
 ```
+
+7. Save the fixtures data into the appropriate fixtures file. The fixtures file locations requires to be at the exact same location as provided in the examples.
