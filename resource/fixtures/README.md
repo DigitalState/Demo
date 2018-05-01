@@ -203,7 +203,6 @@ items:
     fr: []
   state: open
   priority: 0
-  version: 1
 - uuid: 788e4c03-b97b-4f5c-8024-cd128121ca11
   customId: GOV-788e4c03
   owner: BusinessUnit
@@ -218,7 +217,6 @@ items:
     fr: []
   state: open
   priority: 0
-  version: 1
 ```
 
 5. Adjust the value of foreign keys from `entity-name/uuid` to just `uuid`.
@@ -241,7 +239,6 @@ fixtures:
       fr: []
     state: open
     priority: 0
-    version: 1
   - uuid: 788e4c03-b97b-4f5c-8024-cd128121ca11
     customId: GOV-788e4c03
     owner: BusinessUnit
@@ -256,5 +253,4 @@ fixtures:
       fr: []
     state: open
     priority: 0
-    version: 1
 ```
